@@ -1,0 +1,38 @@
+image: cirrusci/flutter
+
+before_script:
+  - git submodule update --init --recursive
+  - flutter pub get
+  - flutter --version
+
+stages:
+  - lint_test
+  - build
+
+lint:
+  stage: lint_test
+  only:
+    - merge_requests
+  script:
+    - flutter analyze
+
+test:
+  stage: lint_test
+  only:
+    - merge_requests
+  script:
+    - flutter test --no-test-assets
+
+test_coverage:
+  stage: lint_test
+  only:
+    - develop
+  script:
+    - flutter test --no-test-assets --coverage
+    - lcov -r coverage/lcov.info -o coverage/lcov_cleaned.info
+    - genhtml -o coverage coverage/lcov_cleaned.info
+  artifacts:
+    paths:
+      - coverage
+      
+

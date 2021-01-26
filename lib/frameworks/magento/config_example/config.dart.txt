@@ -1,0 +1,10 @@
+export 'config/index.dart';
+
+/// Server config demo for WooCommerce
+/// Server config demo for Magento
+const serverConfig = {
+  "type": "magento",
+  "url": "https://magento2.mstore.io",
+  "accessToken": "7r5x3cae1dm3bcx6rbeyvnagxl6afxpo",
+  "blog": "https://mstore.io"
+};

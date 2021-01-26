@@ -1,0 +1,15 @@
+export 'config/index.dart';
+
+/// Server config demo for WooCommerce
+/// Get more example for Opencart / Magento / Shopify from the example folder
+const serverConfig = {
+  "type": "presta",
+  "url": "https://prestashop.inspireui.com",
+  "key": "JC8CEY5ZXG61JZAXY7LLJXQJYHI3R6SJ",
+
+  /// Your website woocommerce. You can remove this line if it same url
+  "blog": "https://mstore.io",
+
+  /// set blank to use as native screen
+  "forgetPassword": "https://prestashop.inspireui.com/password-recovery"
+};

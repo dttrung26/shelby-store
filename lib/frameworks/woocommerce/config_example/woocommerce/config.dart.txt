@@ -1,0 +1,13 @@
+export 'config/index.dart';
+
+const serverConfig = {
+  'type': 'woo',
+  'url': 'https://mstore.io',
+  'consumerKey': 'ck_c16d601d14a44c8080418c1ab9336b72ae8faff2',
+  'consumerSecret': 'cs_1c11c4d0ee3bef861421bf3622f20f6b49c8497a',
+  'blog':
+  'https://mstore.io', //Your website woocommerce. You can remove this line if it same url
+    /// remove to use as native screen
+  'forgetPassword': 'https://mstore.io/wp-login.php?action=lostpassword'
+};
+

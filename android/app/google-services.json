@@ -1,0 +1,312 @@
+{
+  "project_info": {
+    "project_number": "412823237422",
+    "firebase_url": "https://fluxstore-inspireui.firebaseio.com",
+    "project_id": "fluxstore-inspireui",
+    "storage_bucket": "fluxstore-inspireui.appspot.com"
+  },
+  "client": [{
+      "client_info": {
+        "mobilesdk_app_id": "1:412823237422:android:311aeb88cc482397fb40bf",
+        "android_client_info": {
+          "package_name": "com.example.demo"
+        }
+      },
+      "oauth_client": [{
+        "client_id": "412823237422-4tr6lod82roms8nhmbv11gob5tmdatsi.apps.googleusercontent.com",
+        "client_type": 3
+      }],
+      "api_key": [{
+        "current_key": "AIzaSyDSNYVC-8DU9BTcyqkeN9c5pgVhwOBAvGg"
+      }],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [{
+              "client_id": "412823237422-4tr6lod82roms8nhmbv11gob5tmdatsi.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "412823237422-22ugmnpl3hsvl9kpua35r3ralsp1eveo.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.inspireui.fluxshopify"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:412823237422:android:1a11fa0cfa4c2e0dfb40bf",
+        "android_client_info": {
+          "package_name": "com.inspireui.fluxbuilder"
+        }
+      },
+      "oauth_client": [{
+          "client_id": "412823237422-pal4jr7gfa4b74mog6lo5pvsp188haui.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.inspireui.fluxbuilder",
+            "certificate_hash": "ca379939aeb040b15009c95eaad8c7780b8f811a"
+          }
+        },
+        {
+          "client_id": "412823237422-4tr6lod82roms8nhmbv11gob5tmdatsi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [{
+        "current_key": "AIzaSyDSNYVC-8DU9BTcyqkeN9c5pgVhwOBAvGg"
+      }],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [{
+              "client_id": "412823237422-4tr6lod82roms8nhmbv11gob5tmdatsi.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "412823237422-22ugmnpl3hsvl9kpua35r3ralsp1eveo.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.inspireui.fluxshopify"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:412823237422:android:b73da2c366973ebefb40bf",
+        "android_client_info": {
+          "package_name": "com.inspireui.fluxlisting"
+        }
+      },
+      "oauth_client": [{
+          "client_id": "412823237422-35ceiqs4isaubuff7oq398evesgrcnhs.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.inspireui.fluxlisting",
+            "certificate_hash": "d2f7305ee00b64fa92481d688625be8cd78ab7a3"
+          }
+        },
+        {
+          "client_id": "412823237422-9lcnmmbep97t4nkmeer82o7tos533pnj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.inspireui.fluxlisting",
+            "certificate_hash": "ce9f62b601986ed06f365424ac1bef3f44fba851"
+          }
+        },
+        {
+          "client_id": "412823237422-p6eo5bng34hueokvkllihq4k37baae5t.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.inspireui.fluxlisting",
+            "certificate_hash": "63dc9891327135bfbd625ac9bad757354b933ada"
+          }
+        },
+        {
+          "client_id": "412823237422-4tr6lod82roms8nhmbv11gob5tmdatsi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [{
+        "current_key": "AIzaSyDSNYVC-8DU9BTcyqkeN9c5pgVhwOBAvGg"
+      }],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [{
+              "client_id": "412823237422-4tr6lod82roms8nhmbv11gob5tmdatsi.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "412823237422-22ugmnpl3hsvl9kpua35r3ralsp1eveo.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.inspireui.fluxshopify"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:412823237422:android:bd4f8a7424b8ad07fb40bf",
+        "android_client_info": {
+          "package_name": "com.inspireui.fluxshopify"
+        }
+      },
+      "oauth_client": [{
+          "client_id": "412823237422-5i5ifl64f3de0smi4j7e216vvbhui7ua.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.inspireui.fluxshopify",
+            "certificate_hash": "347876c90f0afb3c95fcc9dd38cc7440eae5af5e"
+          }
+        },
+        {
+          "client_id": "412823237422-4tr6lod82roms8nhmbv11gob5tmdatsi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [{
+        "current_key": "AIzaSyDSNYVC-8DU9BTcyqkeN9c5pgVhwOBAvGg"
+      }],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [{
+              "client_id": "412823237422-4tr6lod82roms8nhmbv11gob5tmdatsi.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "412823237422-22ugmnpl3hsvl9kpua35r3ralsp1eveo.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.inspireui.fluxshopify"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:412823237422:android:ec0e0abee17e848c",
+        "android_client_info": {
+          "package_name": "com.inspireui.fluxstore"
+        }
+      },
+      "oauth_client": [{
+          "client_id": "412823237422-tvqn39jgsstnsp2chdkkged17mnlk1l3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.inspireui.fluxstore",
+            "certificate_hash": "adad4df636c505d7ac25fbcd92a829f052f1ea6f"
+          }
+        },
+        {
+          "client_id": "412823237422-pqeicbh9rfjgf2eu4psmkom7utdu8pql.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.inspireui.fluxstore",
+            "certificate_hash": "f5c2f97bd49d191980a7f88c5a213b07470cee73"
+          }
+        },
+        {
+          "client_id": "412823237422-prbtj6vb3s4tvql1l3kvr7g3kqkpssb7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.inspireui.fluxstore",
+            "certificate_hash": "c8e52eb2a057737af6cefb134e27ced1da68ebc7"
+          }
+        },
+        {
+          "client_id": "412823237422-suk2hcqr9nmst6v2lbhpijq3j8ta5fgb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.inspireui.fluxstore",
+            "certificate_hash": "409469d217df83af14c982df1b90bf42038a11f6"
+          }
+        },
+        {
+          "client_id": "412823237422-4tr6lod82roms8nhmbv11gob5tmdatsi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [{
+        "current_key": "AIzaSyDSNYVC-8DU9BTcyqkeN9c5pgVhwOBAvGg"
+      }],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [{
+              "client_id": "412823237422-4tr6lod82roms8nhmbv11gob5tmdatsi.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "412823237422-22ugmnpl3hsvl9kpua35r3ralsp1eveo.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.inspireui.fluxshopify"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:412823237422:android:d5d9a435d9409bf9fb40bf",
+        "android_client_info": {
+          "package_name": "com.inspireui.fluxstore.vendor"
+        }
+      },
+      "oauth_client": [{
+          "client_id": "412823237422-p5seqlndt7f01m0r9j3bmp6cgi4dtvfo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.inspireui.fluxstore.vendor",
+            "certificate_hash": "772f6c1bc38a2b07fd9befcd6c61416471f53b8b"
+          }
+        },
+        {
+          "client_id": "412823237422-4tr6lod82roms8nhmbv11gob5tmdatsi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [{
+        "current_key": "AIzaSyDSNYVC-8DU9BTcyqkeN9c5pgVhwOBAvGg"
+      }],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [{
+              "client_id": "412823237422-4tr6lod82roms8nhmbv11gob5tmdatsi.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "412823237422-22ugmnpl3hsvl9kpua35r3ralsp1eveo.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.inspireui.fluxshopify"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:412823237422:android:07f64eb5fd067532fb40bf",
+        "android_client_info": {
+          "package_name": "com.villa.gallerya"
+        }
+      },
+      "oauth_client": [{
+        "client_id": "412823237422-4tr6lod82roms8nhmbv11gob5tmdatsi.apps.googleusercontent.com",
+        "client_type": 3
+      }],
+      "api_key": [{
+        "current_key": "AIzaSyDSNYVC-8DU9BTcyqkeN9c5pgVhwOBAvGg"
+      }],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [{
+              "client_id": "412823237422-4tr6lod82roms8nhmbv11gob5tmdatsi.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "412823237422-22ugmnpl3hsvl9kpua35r3ralsp1eveo.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.inspireui.fluxshopify"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

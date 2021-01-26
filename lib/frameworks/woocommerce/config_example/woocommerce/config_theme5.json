@@ -1,0 +1,114 @@
+{
+  "HorizonLayout": [
+    {
+      "layout": "header_text",
+      "fontSize": 22.0,
+      "title": "Our Biggest Hits",
+      "isSafeArea": true
+    },
+    {
+      "layout": "category",
+      "type": "icon",
+      "wrap": true,
+      "size": 1.2,
+      "radius": 50.0,
+      "noBackground": true,
+      "columns": 4,
+      "shadow": 0.0,
+      "padding": 10.0,
+
+      "items": [
+        {
+          "category": 24,
+          "image": "assets/icons/categories/ic_home.png",
+          "colors": [
+            "#5f27cd"
+          ]
+        },
+        {
+          "category": 25,
+          "image": "assets/icons/categories/ic_picture.png",
+          "colors": [
+            "#ff6b6b"
+          ]
+        },
+        {
+          "category": 26,
+          "image": "assets/icons/categories/ic_glasses.png",
+          "colors": [
+            "#0abde3"
+          ]
+        },
+        {
+          "category": 27,
+          "image": "assets/icons/categories/ic_couch.png",
+          "colors": [
+            "#ee5253"
+          ]
+        },
+        {
+          "category": 28,
+          "image": "assets/icons/categories/ic_flower.png",
+          "colors": [
+            "#ff9f43"
+          ]
+        },
+        {
+          "category": 29,
+          "image": "assets/icons/categories/ic_ballon.png",
+          "colors": [
+            "#01a3a4"
+          ]
+        },
+        {
+          "category": 30,
+          "image": "assets/icons/categories/ic_broom.png",
+          "colors": [
+            "#341f97"
+          ]
+        },
+        {
+          "category": 18,
+          "image": "assets/icons/categories/ic_clock.png",
+          "colors": [
+            "#222f3e"
+          ]
+        }
+      ]
+    },
+
+    {
+      "name": "New Collections",
+      "layout": "staggered",
+      "limit": 20,
+      "category": 29
+    }
+  ],
+  "Setting": {
+    "MainColor": "#3FC1BE",
+    "ProductListLayout": "list"
+  },
+  "TabBar": [
+    {
+      "layout": "home",
+      "icon": "assets/icons/tabs/icon-home.png"
+    },
+    {
+      "layout": "category",
+      "categoryLayout": "card",
+      "icon": "assets/icons/tabs/icon-category.png"
+    },
+    {
+      "layout": "search",
+      "icon": "assets/icons/tabs/icon-search.png"
+    },
+    {
+      "layout": "cart",
+      "icon": "assets/icons/tabs/icon-cart2.png"
+    },
+    {
+      "layout": "profile",
+      "icon": "assets/icons/tabs/icon-user.png"
+    }
+  ]
+}

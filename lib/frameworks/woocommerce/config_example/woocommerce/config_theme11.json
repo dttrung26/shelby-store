@@ -1,0 +1,70 @@
+{
+  "HorizonLayout": [
+    {
+      "layout": "header_text",
+      "fontSize": 25.0,
+      "padding": 30.0,
+      "height": 0.2,
+      "title": "Shop by Categories",
+      "isSafeArea": true
+    },
+    {
+      "layout": "category",
+      "type": "image",
+      "wrap": false,
+      "items": [
+        {
+          "category": 25
+        },
+        {
+          "category": 26
+        },
+        {
+          "category": 27
+        },
+        {
+          "image": "https://trello-attachments.s3.amazonaws.com/5f8fe6093cd3ef24d9ede5f5/362x272/4eb16095e8abb3fdad22a29a0e469d63/hci_restaurant.jpg",
+          "name": "Restaurants",
+          "description": "Top-rated eats"
+        },
+        {
+          "image": "https://trello-attachments.s3.amazonaws.com/5f8fe6093cd3ef24d9ede5f5/362x241/2ddc0170ee35df374a96e02a6432b68e/hci_adventures.jpg",
+          "name": "Adventures",
+          "description": "Multi-day trips"
+        }
+      ]
+    }
+  ],
+
+  "VerticalLayout": {
+    "layout": "list",
+    "name": "Recent Collections"
+  },
+  "Setting": {
+    "MainColor": "#3FC1BE",
+    "ProductListLayout": "list"
+  },
+  "TabBar": [
+    {
+      "layout": "home",
+      "icon": "assets/icons/tabs/icon-home.png"
+    },
+    {
+      "layout": "category",
+      "categoryLayout": "card",
+      "icon": "assets/icons/tabs/icon-category.png"
+    },
+    {
+      "layout": "search",
+      "icon": "assets/icons/tabs/icon-search.png"
+    },
+    {
+      "layout": "cart",
+      "icon": "assets/icons/tabs/icon-cart2.png"
+    },
+    {
+      "layout": "profile",
+      "icon": "assets/icons/tabs/icon-user.png"
+    }
+  ]
+}

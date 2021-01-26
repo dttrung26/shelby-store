@@ -1,0 +1,10 @@
+export 'config/index.dart';
+
+/// Server config demo for Shopify
+const serverConfig = {
+  "type": "shopify",
+  "url": "https://flutter-mstore.myshopify.com",
+  "accessToken": "442d582061cc4e16eba32139c2120800",
+  // "blog": "http://demo.mstore.io", //Your website woocommerce. You can remove this line if it same url
+  "forgetPassword": "https://mstore.io/wp-login.php?action=lostpassword"
+};

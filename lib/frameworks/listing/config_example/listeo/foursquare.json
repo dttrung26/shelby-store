@@ -1,0 +1,81 @@
+{
+  "Background": {
+    "scroll": true,
+    "height": 0.45,
+    "image": "assets/images/categories/fourquare.jpg"
+  },
+  "HorizonLayout": [
+    {
+      "layout": "header_text",
+      "center": true,
+      "fontSize": 23.0,
+      "height": 0.4,
+      "title": "",
+      "type": "static"
+    },
+    {
+      "layout": "header_search",
+      "radius": 6.0,
+      "text": "Search for a product",
+      "blur": true
+    },
+    {
+      "layout": "category",
+      "type": "icon",
+      "size": 1.4,
+      "radius": 50.0,
+      "columns": 3,
+      "padding": 30.0,
+      "line": true,
+      "items": [
+        {
+          "category": 29,
+          "image": "assets/icons/categories/ls_build.png"
+        },
+        {
+          "category": 19,
+          "image": "assets/icons/categories/ls_eat.png"
+        },
+        {
+          "category": 34,
+          "image": "assets/icons/categories/ls_event.png"
+        },
+        {
+          "category": 37,
+          "image": "assets/icons/categories/ls_fitness.png"
+        },
+        {
+          "category": 35,
+          "image": "assets/icons/categories/ls_other.png"
+        },
+        {
+          "category": 33,
+          "image": "assets/icons/categories/ls_service.png"
+        }
+      ]
+    }
+  ],
+  "Setting": {
+    "MainColor": "#3FC1BE",
+    "ProductListLayout": "list"
+  },
+  "TabBar": [
+    {
+      "layout": "home",
+      "icon": "assets/icons/tabs/icon-home.png"
+    },
+    {
+      "layout": "category",
+      "categoryLayout": "card",
+      "icon": "assets/icons/tabs/icon-category.png"
+    },
+    {
+      "layout": "search",
+      "icon": "assets/icons/tabs/icon-search.png"
+    },
+    {
+      "layout": "profile",
+      "icon": "assets/icons/tabs/icon-user.png"
+    }
+  ]
+}

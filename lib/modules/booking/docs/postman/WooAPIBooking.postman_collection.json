@@ -1,0 +1,3751 @@
+{
+	"info": {
+		"_postman_id": "ed27bf23-272d-4c98-9b54-cd8415ae9d6e",
+		"name": "Woo API Booking",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "API Product and Order",
+			"item": [
+				{
+					"name": "Create Order",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Cache-Control",
+								"type": "text",
+								"value": "no-cache",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"set_paid\": false,\n    \"line_items\": [\n        {\n            \"product_id\": \"174\",\n            \"quantity\": 1\n        }\n    ],\n    \"customer_id\": \"10\",\n    \"payment_method\": \"cod\",\n    \"payment_method_title\": \"Cash on delivery\",\n    \"billing\": {\n        \"first_name\": \"hieu\\t\",\n        \"last_name\": \"hieu\",\n        \"address_1\": \"Ha Noi\",\n        \"address_2\": \"\",\n        \"city\": \"Ha Noi\",\n        \"state\": \"56\",\n        \"country\": \"VN\",\n        \"email\": \"hieuinspireui@gmail.com\",\n        \"phone\": \"0933388989\",\n        \"postcode\": \"700000\",\n        \"mapUrl\": null\n    },\n    \"shipping\": {\n        \"first_name\": \"hieu\\t\",\n        \"last_name\": \"hieu\",\n        \"address_1\": \"Ha Noi\",\n        \"address_2\": \"\",\n        \"city\": \"Ha Noi\",\n        \"state\": \"56\",\n        \"country\": \"VN\",\n        \"email\": \"hieuinspireui@gmail.com\",\n        \"phone\": \"0933388989\",\n        \"postcode\": \"700000\",\n        \"mapUrl\": null\n    },\n    \"shipping_lines\": [\n        {\n            \"method_id\": \"free_shipping:2\",\n            \"method_title\": \"Free shipping\",\n            \"total\": \"0.0\"\n        }\n    ]\n}"
+						},
+						"url": {
+							"raw": "{{baseUrlWoo}}/orders?{{keyVerify}}",
+							"host": [
+								"{{baseUrlWoo}}"
+							],
+							"path": [
+								"orders"
+							],
+							"query": [
+								{
+									"key": "{{keyVerify}}",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get list customer",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrlWoo}}/customers?{{keyVerify}}",
+							"host": [
+								"{{baseUrlWoo}}"
+							],
+							"path": [
+								"customers"
+							],
+							"query": [
+								{
+									"key": "{{keyVerify}}",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get list product",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrlWoo}}/products?{{keyVerify}}",
+							"host": [
+								"{{baseUrlWoo}}"
+							],
+							"path": [
+								"products"
+							],
+							"query": [
+								{
+									"key": "{{keyVerify}}",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get orther ",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrlWoo}}/orders?{{keyVerify}}",
+							"host": [
+								"{{baseUrlWoo}}"
+							],
+							"path": [
+								"orders"
+							],
+							"query": [
+								{
+									"key": "{{keyVerify}}",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "API Booking Custom",
+			"item": [
+				{
+					"name": "Availability API Controller",
+					"request": {
+						"auth": {
+							"type": "oauth1",
+							"oauth1": [
+								{
+									"key": "consumerSecret",
+									"value": "{{consumer_secret}}",
+									"type": "string"
+								},
+								{
+									"key": "consumerKey",
+									"value": "{{consumer_key}}",
+									"type": "string"
+								},
+								{
+									"key": "signatureMethod",
+									"value": "HMAC-SHA1",
+									"type": "string"
+								},
+								{
+									"key": "version",
+									"value": "1.0",
+									"type": "string"
+								},
+								{
+									"key": "addParamsToHeader",
+									"value": false,
+									"type": "boolean"
+								},
+								{
+									"key": "addEmptyParamsToSign",
+									"value": false,
+									"type": "boolean"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrlBooking}}/wp-json/wc-appointments/v1/availabilities?filter[0][key]=kind_id&filter[0][value]=7",
+							"host": [
+								"{{baseUrlBooking}}"
+							],
+							"path": [
+								"wp-json",
+								"wc-appointments",
+								"v1",
+								"availabilities"
+							],
+							"query": [
+								{
+									"key": "filter[0][key]",
+									"value": "kind_id"
+								},
+								{
+									"key": "filter[0][value]",
+									"value": "7"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Order",
+					"request": {
+						"auth": {
+							"type": "oauth1",
+							"oauth1": [
+								{
+									"key": "consumerSecret",
+									"value": "{{consumer_secret}}",
+									"type": "string"
+								},
+								{
+									"key": "consumerKey",
+									"value": "{{consumer_key}}",
+									"type": "string"
+								},
+								{
+									"key": "signatureMethod",
+									"value": "HMAC-SHA1",
+									"type": "string"
+								},
+								{
+									"key": "version",
+									"value": "1.0",
+									"type": "string"
+								},
+								{
+									"key": "addParamsToHeader",
+									"value": false,
+									"type": "boolean"
+								},
+								{
+									"key": "addEmptyParamsToSign",
+									"value": false,
+									"type": "boolean"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"payment_method\": \"cod\",\n  \"payment_method_title\": \"Direct Bank Transfer\",\n  \"set_paid\": true,\n  \"billing\": {\n    \"first_name\": \"John\",\n    \"last_name\": \"Doe\",\n    \"address_1\": \"969 Market\",\n    \"address_2\": \"\",\n    \"city\": \"San Francisco\",\n    \"state\": \"CA\",\n    \"postcode\": \"94103\",\n    \"country\": \"US\",\n    \"email\": \"john.doe@example.com\",\n    \"phone\": \"(555) 555-5555\"\n  },\n  \"shipping\": {\n    \"first_name\": \"John\",\n    \"last_name\": \"Doe\",\n    \"address_1\": \"969 Market\",\n    \"address_2\": \"\",\n    \"city\": \"San Francisco\",\n    \"state\": \"CA\",\n    \"postcode\": \"94103\",\n    \"country\": \"US\"\n  },\n  \"line_items\": [\n    {\n      \"product_id\": 7,\n      \"quantity\": 1\n    }\n  ],\n  \"customer_id\":1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/wp-json/wc/v2/orders",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"wp-json",
+								"wc",
+								"v2",
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Booking",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"wc_appointments_field_start_date_month\":\"08\",\n  \"wc_appointments_field_start_date_day\":\"06\",\n  \"wc_appointments_field_start_date_year\":\"2020\",\n  \"wc_appointments_field_start_date_time\":\"12:00\",\n  \"wc_appointments_field_addons_duration\":\"0\",\n  \"wc_appointments_field_addons_cost\":\"0\",\n  \"product_id\":\"174\",\n  \"order_id\":\"24120\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/wp-json/api/flutter_booking/checkout",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"wp-json",
+								"api",
+								"flutter_booking",
+								"checkout"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "b2d13059-c8fd-4641-86b0-bee029230d55",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "a1996fda-8bb7-4f94-90e8-6d5917f2306f",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "API Booking Plugin",
+			"item": [
+				{
+					"name": "appointment",
+					"item": [
+						{
+							"name": "Appointments",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "",
+											"value": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrlBooking}}/appointments?context=view",
+									"host": [
+										"{{baseUrlBooking}}"
+									],
+									"path": [
+										"appointments"
+									],
+									"query": [
+										{
+											"key": "context",
+											"value": "view"
+										},
+										{
+											"key": "page",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "per_page",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "search",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "after",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "before",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "exclude",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "offset",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "order",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "orderby",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Appointments",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json; charset=utf-8",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"all_day\": false,\n    \"cost\": \"22.50\",\n    \"customer_id\": 0,\n    \"date_created\": 1595506030,\n    \"date_modified\": 1595506030,\n    \"start\": 1595757600,\n    \"end\": 1595761200,\n    \"order_id\": 5456,\n    \"order_item_id\": 6,\n    \"parent_id\": 0,\n    \"product_id\": 5308,\n    \"staff_id\": [],\n    \"staff_ids\": [],\n    \"status\": \"unpaid\",\n    \"customer_status\": \"no-show\",\n    \"qty\": 0,\n    \"timezone\": \"\"\n    \n}"
+								},
+								"url": {
+									"raw": "{{baseUrlBooking}}/appointments?{{keyVerify}}",
+									"host": [
+										"{{baseUrlBooking}}"
+									],
+									"path": [
+										"appointments"
+									],
+									"query": [
+										{
+											"key": "{{keyVerify}}",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Appointments/{id}",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrlBooking}}/appointments/2?context=view",
+									"host": [
+										"{{baseUrlBooking}}"
+									],
+									"path": [
+										"appointments",
+										"2"
+									],
+									"query": [
+										{
+											"key": "context",
+											"value": "view"
+										},
+										{
+											"key": "page",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "per_page",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "search",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "after",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "before",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "exclude",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "offset",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "order",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "orderby",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Appointments/{id}",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json; charset=utf-8",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"customer_id\": 8,\n    \"start\": 1595512800,\n    \"end\": 1595516400,\n    \"order_id\": 5452,\n    \"product_id\":5328\n}"
+								},
+								"url": {
+									"raw": "{{baseUrlBooking}}/appointments/5455?{{keyVerify}}",
+									"host": [
+										"{{baseUrlBooking}}"
+									],
+									"path": [
+										"appointments",
+										"5455"
+									],
+									"query": [
+										{
+											"key": "context",
+											"value": "view",
+											"disabled": true
+										},
+										{
+											"key": "page",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "per_page",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "search",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "after",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "before",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "exclude",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "offset",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "order",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "orderby",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "{{keyVerify}}",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Appointments/{id}",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json; charset=utf-8",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{   \n    \"order_id\":5456,\n    \"meta_data\": [\n        {\n            \"key\": \"all_day\",\n            \"value\": false\n        },\n        {\n            \"key\": \"_appointment_cost\",\n            \"value\": \"24.50\"\n        },\n        {\n            \"key\": \"_appointment_status\",\n            \"value\": \"unpaid\"\n        },\n        {\n            \"key\": \"_appointment_customer_status\",\n            \"value\": \"no-show\"\n        },\n        {\n            \"key\": \"_appointment_product_id\",\n            \"value\": 5308\n        },\n        {\n            \"key\": \"_appointment_start\",\n            \"value\": \"2020-07-26 10:00:00\"\n        },\n        {\n            \"key\": \"_appointment_end\",\n            \"value\": \"2020-07-26 11:00:00\"\n        },\n        {\n            \"key\": \"_appointment_qty\",\n            \"value\": 1\n        },\n        {\n            \"key\": \"_appointment_customer_id\",\n            \"value\": 8\n        },\n        {\n            \"key\": \"_appointment_order_item_id\",\n            \"value\": 6\n        },\n        {\n            \"key\": \"_appointment_order_id\",\n            \"value\": 5456\n        },\n        {\n            \"key\": \"_appointment_parent_id\",\n            \"value\": 5456\n        }\n    ]\n}"
+								},
+								"url": {
+									"raw": "{{baseUrlBooking}}/appointments/5459?{{keyVerify}}&context=edit",
+									"host": [
+										"{{baseUrlBooking}}"
+									],
+									"path": [
+										"appointments",
+										"5459"
+									],
+									"query": [
+										{
+											"key": "context",
+											"value": "view",
+											"disabled": true
+										},
+										{
+											"key": "page",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "per_page",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "search",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "after",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "before",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "exclude",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "offset",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "order",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "orderby",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "{{keyVerify}}",
+											"value": null
+										},
+										{
+											"key": "context",
+											"value": "edit"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Appointments/{id}",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json; charset=utf-8",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"customer_id\": 8,\n    \"start\": 1595512800,\n    \"end\": 1595516400,\n    \"order_id\": 5452,\n    \"product_id\":5328\n}"
+								},
+								"url": {
+									"raw": "{{baseUrlBooking}}/appointments/5455?{{keyVerify}}",
+									"host": [
+										"{{baseUrlBooking}}"
+									],
+									"path": [
+										"appointments",
+										"5455"
+									],
+									"query": [
+										{
+											"key": "context",
+											"value": "view",
+											"disabled": true
+										},
+										{
+											"key": "page",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "per_page",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "search",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "after",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "before",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "exclude",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "offset",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "order",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "orderby",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "{{keyVerify}}",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Appointments/{id}",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "force",
+											"value": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrlBooking}}/appointments/2",
+									"host": [
+										"{{baseUrlBooking}}"
+									],
+									"path": [
+										"appointments",
+										"2"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "per_page",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "search",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "after",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "before",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "exclude",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "offset",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "order",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "orderby",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Appointments/batch",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "force",
+											"value": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrlBooking}}/appointments/batch",
+									"host": [
+										"{{baseUrlBooking}}"
+									],
+									"path": [
+										"appointments",
+										"batch"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "per_page",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "search",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "after",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "before",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "exclude",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "offset",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "order",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "orderby",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Appointments/batch",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "force",
+											"value": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrlBooking}}/appointments/batch",
+									"host": [
+										"{{baseUrlBooking}}"
+									],
+									"path": [
+										"appointments",
+										"batch"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "per_page",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "search",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "after",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "before",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "exclude",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "offset",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "order",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "orderby",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Appointments/batch",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "force",
+											"value": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrlBooking}}/appointments/batch",
+									"host": [
+										"{{baseUrlBooking}}"
+									],
+									"path": [
+										"appointments",
+										"batch"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "per_page",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "search",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "after",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "before",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "exclude",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "offset",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "order",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "orderby",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Appointments/{id} Copy",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json; charset=utf-8",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{   \n    \"order_id\":5456,\n    \"meta_data\": [\n        {\n            \"key\": \"all_day\",\n            \"value\": false\n        },\n        {\n            \"key\": \"_appointment_cost\",\n            \"value\": \"24.50\"\n        },\n        {\n            \"key\": \"_appointment_status\",\n            \"value\": \"unpaid\"\n        },\n        {\n            \"key\": \"_appointment_customer_status\",\n            \"value\": \"no-show\"\n        },\n        {\n            \"key\": \"_appointment_product_id\",\n            \"value\": 5308\n        },\n        {\n            \"key\": \"_appointment_start\",\n            \"value\": \"2020-07-26 10:00:00\"\n        },\n        {\n            \"key\": \"_appointment_end\",\n            \"value\": \"2020-07-26 11:00:00\"\n        },\n        {\n            \"key\": \"_appointment_qty\",\n            \"value\": 1\n        },\n        {\n            \"key\": \"_appointment_customer_id\",\n            \"value\": 8\n        },\n        {\n            \"key\": \"_appointment_order_item_id\",\n            \"value\": 6\n        },\n        {\n            \"key\": \"_appointment_order_id\",\n            \"value\": 5456\n        },\n        {\n            \"key\": \"order_id\",\n            \"value\": 5456\n        }\n    ]\n}"
+								},
+								"url": {
+									"raw": "{{baseUrlBooking}}/appointments/5459?{{keyVerify}}&context=edit",
+									"host": [
+										"{{baseUrlBooking}}"
+									],
+									"path": [
+										"appointments",
+										"5459"
+									],
+									"query": [
+										{
+											"key": "context",
+											"value": "view",
+											"disabled": true
+										},
+										{
+											"key": "page",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "per_page",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "search",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "after",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "before",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "exclude",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "offset",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "order",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "orderby",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "{{keyVerify}}",
+											"value": null
+										},
+										{
+											"key": "context",
+											"value": "edit"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "products",
+					"item": [
+						{
+							"name": "Products",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrlBooking}}/products",
+									"host": [
+										"{{baseUrlBooking}}"
+									],
+									"path": [
+										"products"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Products",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "slug",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "date_created",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "date_created_gmt",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "type",
+											"value": "",
+											"description": "\"type\": {\n              \"required\": false,\n              \"default\": \"simple\",\n              \"enum\": [\n                \"simple\",\n                \"grouped\",\n                \"external\",\n                \"variable\"\n              ],\n              \"description\": \"Product type.\",\n              \"type\": \"string\"\n            },",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "featured",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "catalog_visibility",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "short_description",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "sku",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "regular_price",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "sale_price",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "date_on_sale_from",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "date_on_sale_from_gmt",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "date_on_sale_to",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "date_on_sale_to_gmt",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "virtual",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "downloadable",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "downloads",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "download_limit",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "download_expiry",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "external_url",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "button_text",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "tax_status",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "tax_class",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "manage_stock",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "stock_quantity",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "stock_status",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "backorders",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "sold_individually",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "weight",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "dimensions",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "shipping_class",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "reviews_allowed",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "upsell_ids",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "cross_sell_ids",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "parent_id",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "purchase_note",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "categories",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "tags",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "images",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "attributes",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "default_attributes",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "menu_order",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "meta_data",
+											"value": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrlBooking}}/products",
+									"host": [
+										"{{baseUrlBooking}}"
+									],
+									"path": [
+										"products"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Products/{id}",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host_w}}/products/5308",
+									"host": [
+										"{{host_w}}"
+									],
+									"path": [
+										"products",
+										"5308"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Products/{id}",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "slug",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "date_created",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "date_created_gmt",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "type",
+											"value": "",
+											"description": "\"type\": {\n              \"required\": false,\n              \"enum\": [\n                \"simple\",\n                \"grouped\",\n                \"external\",\n                \"variable\"\n              ],\n              \"description\": \"Product type.\",\n              \"type\": \"string\"\n            },",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "",
+											"description": "\"status\": {\n              \"required\": false,\n              \"enum\": [\n                \"draft\",\n                \"pending\",\n                \"private\",\n                \"publish\",\n                \"future\"\n              ],\n              \"description\": \"Product status (post status).\",\n              \"type\": \"string\"\n            },",
+											"type": "text"
+										},
+										{
+											"key": "featured",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "catalog_visibility",
+											"value": "",
+											"description": "\"catalog_visibility\": {\n              \"required\": false,\n              \"enum\": [\n                \"visible\",\n                \"catalog\",\n                \"search\",\n                \"hidden\"\n              ],\n              \"description\": \"Catalog visibility.\",\n              \"type\": \"string\"\n            },",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "short_description",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "sku",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "regular_price",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "sale_price",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "date_on_sale_from",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "date_on_sale_from_gmt",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "date_on_sale_to",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "date_on_sale_to_gmt",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "virtual",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "downloadable",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "downloads",
+											"value": "",
+											"description": "downloads\": {\n              \"required\": false,\n              \"description\": \"List of downloadable files.\",\n              \"type\": \"array\",\n              \"items\": {\n                \"type\": \"object\",\n                \"properties\": {\n                  \"id\": {\n                    \"description\": \"File ID.\",\n                    \"type\": \"string\",\n                    \"context\": [\n                      \"view\",\n                      \"edit\"\n                    ]\n                  },\n                  \"name\": {\n                    \"description\": \"File name.\",\n                    \"type\": \"string\",\n                    \"context\": [\n                      \"view\",\n                      \"edit\"\n                    ]\n                  },\n                  \"file\": {\n                    \"description\": \"File URL.\",\n                    \"type\": \"string\",\n                    \"context\": [\n                      \"view\",\n                      \"edit\"\n                    ]\n                  }\n                }\n              }\n            },",
+											"type": "text"
+										},
+										{
+											"key": "download_limit",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "download_expiry",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "external_url",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "button_text",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "tax_status",
+											"value": "",
+											"description": " \"tax_status\": {\n              \"required\": false,\n              \"enum\": [\n                \"taxable\",\n                \"shipping\",\n                \"none\"\n              ],\n              \"description\": \"Tax status.\",\n              \"type\": \"string\"\n            },",
+											"type": "text"
+										},
+										{
+											"key": "tax_class",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "manage_stock",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "stock_quantity",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "stock_status",
+											"value": "",
+											"description": " \"stock_status\": {\n              \"required\": false,\n              \"enum\": [\n                \"instock\",\n                \"outofstock\",\n                \"onbackorder\"\n              ],\n              \"description\": \"Controls the stock status of the product.\",\n              \"type\": \"string\"\n            },",
+											"type": "text"
+										},
+										{
+											"key": "backorders",
+											"value": "",
+											"description": "\"backorders\": {\n              \"required\": false,\n              \"enum\": [\n                \"no\",\n                \"notify\",\n                \"yes\"\n              ],\n              \"description\": \"If managing stock, this controls if backorders are allowed.\",\n              \"type\": \"string\"\n            },",
+											"type": "text"
+										},
+										{
+											"key": "sold_individually",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "weight",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "dimensions",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "shipping_class",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "reviews_allowed",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "upsell_ids",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "cross_sell_ids",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "parent_id",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "purchase_note",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "categories",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "tags",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "images",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "attributes",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "default_attributes",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "menu_order",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "meta_data",
+											"value": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrlBooking}}/products/5640",
+									"host": [
+										"{{baseUrlBooking}}"
+									],
+									"path": [
+										"products",
+										"5640"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Products/{id}",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "force",
+											"value": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrlBooking}}/products/5640",
+									"host": [
+										"{{baseUrlBooking}}"
+									],
+									"path": [
+										"products",
+										"5640"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Products/batch",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "slug",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "date_created",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "date_created_gmt",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "type",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "featured",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "catalog_visibility",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "short_description",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "sku",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "regular_price",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "sale_price",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "date_on_sale_from",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "date_on_sale_from_gmt",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "date_on_sale_to",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "date_on_sale_to_gmt",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "virtual",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "downloadable",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "downloads",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "download_limit",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "download_expiry",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "external_url",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "button_text",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "tax_status",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "tax_class",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "manage_stock",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "stock_quantity",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "stock_status",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "backorders",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "sold_individually",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "weight",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "dimensions",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "shipping_class",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "reviews_allowed",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "upsell_ids",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "cross_sell_ids",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "parent_id",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "purchase_note",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "categories",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "tags",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "images",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "attributes",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "default_attributes",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "menu_order",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "meta_data",
+											"value": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrlBooking}}/products/batch",
+									"host": [
+										"{{baseUrlBooking}}"
+									],
+									"path": [
+										"products",
+										"batch"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Products/batch",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "slug",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "date_created",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "date_created_gmt",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "type",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "featured",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "catalog_visibility",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "short_description",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "sku",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "regular_price",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "sale_price",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "date_on_sale_from",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "date_on_sale_from_gmt",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "date_on_sale_to",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "date_on_sale_to_gmt",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "virtual",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "downloadable",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "downloads",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "download_limit",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "download_expiry",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "external_url",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "button_text",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "tax_status",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "tax_class",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "manage_stock",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "stock_quantity",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "stock_status",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "backorders",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "sold_individually",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "weight",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "dimensions",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "shipping_class",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "reviews_allowed",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "upsell_ids",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "cross_sell_ids",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "parent_id",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "purchase_note",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "categories",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "tags",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "images",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "attributes",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "default_attributes",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "menu_order",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "meta_data",
+											"value": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrlBooking}}/products/batch",
+									"host": [
+										"{{baseUrlBooking}}"
+									],
+									"path": [
+										"products",
+										"batch"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Products/batch",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "slug",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "date_created",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "date_created_gmt",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "type",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "featured",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "catalog_visibility",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "short_description",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "sku",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "regular_price",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "sale_price",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "date_on_sale_from",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "date_on_sale_from_gmt",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "date_on_sale_to",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "date_on_sale_to_gmt",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "virtual",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "downloadable",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "downloads",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "download_limit",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "download_expiry",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "external_url",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "button_text",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "tax_status",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "tax_class",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "manage_stock",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "stock_quantity",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "stock_status",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "backorders",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "sold_individually",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "weight",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "dimensions",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "shipping_class",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "reviews_allowed",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "upsell_ids",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "cross_sell_ids",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "parent_id",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "purchase_note",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "categories",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "tags",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "images",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "attributes",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "default_attributes",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "menu_order",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "meta_data",
+											"value": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrlBooking}}/products/batch",
+									"host": [
+										"{{baseUrlBooking}}"
+									],
+									"path": [
+										"products",
+										"batch"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Products/categories ",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "force",
+											"value": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrlBooking}}/products/categories?context=view&page=1&per_page=10&search&exclude&include&order&orderby&hide_empty&parent&product&slug",
+									"host": [
+										"{{baseUrlBooking}}"
+									],
+									"path": [
+										"products",
+										"categories"
+									],
+									"query": [
+										{
+											"key": "context",
+											"value": "view"
+										},
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "per_page",
+											"value": "10"
+										},
+										{
+											"key": "search",
+											"value": null
+										},
+										{
+											"key": "exclude",
+											"value": null
+										},
+										{
+											"key": "include",
+											"value": null
+										},
+										{
+											"key": "order",
+											"value": null
+										},
+										{
+											"key": "orderby",
+											"value": null
+										},
+										{
+											"key": "hide_empty",
+											"value": null
+										},
+										{
+											"key": "parent",
+											"value": null
+										},
+										{
+											"key": "product",
+											"value": null
+										},
+										{
+											"key": "slug",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Products/categories ",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "slug",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "parent",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "display",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "menu_order",
+											"value": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrlBooking}}/products/categories",
+									"host": [
+										"{{baseUrlBooking}}"
+									],
+									"path": [
+										"products",
+										"categories"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Products/categories/{id}",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{baseUrlBooking}}/products/categories/2?context=view",
+									"host": [
+										"{{baseUrlBooking}}"
+									],
+									"path": [
+										"products",
+										"categories",
+										"2"
+									],
+									"query": [
+										{
+											"key": "context",
+											"value": "view"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Products/categories/{id}",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "slug",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "parent",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "display",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "menu_order",
+											"value": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrlBooking}}/products/categories/2",
+									"host": [
+										"{{baseUrlBooking}}"
+									],
+									"path": [
+										"products",
+										"categories",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Products/categories/{id}",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "slug",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "parent",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "display",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "menu_order",
+											"value": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrlBooking}}/products/categories/2",
+									"host": [
+										"{{baseUrlBooking}}"
+									],
+									"path": [
+										"products",
+										"categories",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Products/categories/{id}",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "slug",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "parent",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "display",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "menu_order",
+											"value": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrlBooking}}/products/categories/2",
+									"host": [
+										"{{baseUrlBooking}}"
+									],
+									"path": [
+										"products",
+										"categories",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Products/categories/{id}",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "force",
+											"value": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrlBooking}}/products/categories/2",
+									"host": [
+										"{{baseUrlBooking}}"
+									],
+									"path": [
+										"products",
+										"categories",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Products/categories/batch",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "slug",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "parent",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "display",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "menu_order",
+											"value": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrlBooking}}/products/categories/batch",
+									"host": [
+										"{{baseUrlBooking}}"
+									],
+									"path": [
+										"products",
+										"categories",
+										"batch"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Products/categories/batch",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "slug",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "parent",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "display",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "menu_order",
+											"value": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrlBooking}}/products/categories/batch",
+									"host": [
+										"{{baseUrlBooking}}"
+									],
+									"path": [
+										"products",
+										"categories",
+										"batch"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Products/categories/batch",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "slug",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "parent",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "display",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "menu_order",
+											"value": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrlBooking}}/products/categories/batch",
+									"host": [
+										"{{baseUrlBooking}}"
+									],
+									"path": [
+										"products",
+										"categories",
+										"batch"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "staff",
+					"item": [
+						{
+							"name": "Staff",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrlBooking}}/staff?context&page&per_page&search&exclude&include&offset&order&orderby&email&role",
+									"host": [
+										"{{baseUrlBooking}}"
+									],
+									"path": [
+										"staff"
+									],
+									"query": [
+										{
+											"key": "context",
+											"value": null
+										},
+										{
+											"key": "page",
+											"value": null
+										},
+										{
+											"key": "per_page",
+											"value": null
+										},
+										{
+											"key": "search",
+											"value": null
+										},
+										{
+											"key": "exclude",
+											"value": null
+										},
+										{
+											"key": "include",
+											"value": null
+										},
+										{
+											"key": "offset",
+											"value": null
+										},
+										{
+											"key": "order",
+											"value": null
+										},
+										{
+											"key": "orderby",
+											"value": null
+										},
+										{
+											"key": "email",
+											"value": null
+										},
+										{
+											"key": "role",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Staff",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": null
+										},
+										{
+											"key": "first_name",
+											"value": null
+										},
+										{
+											"key": "last_name",
+											"value": null
+										},
+										{
+											"key": "username",
+											"value": null
+										},
+										{
+											"key": "password",
+											"value": null
+										},
+										{
+											"key": "billing",
+											"value": null
+										},
+										{
+											"key": "shipping",
+											"value": null
+										},
+										{
+											"key": "meta_data",
+											"value": null
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrlBooking}}/staff",
+									"host": [
+										"{{baseUrlBooking}}"
+									],
+									"path": [
+										"staff"
+									],
+									"query": [
+										{
+											"key": "context",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "page",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "per_page",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "search",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "exclude",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "include",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "offset",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "order",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "orderby",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "email",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "role",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Staff Batch",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "first_name",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "last_name",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "username",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "billing",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "shipping",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "meta_data",
+											"value": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrlBooking}}/staff/batch",
+									"host": [
+										"{{baseUrlBooking}}"
+									],
+									"path": [
+										"staff",
+										"batch"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Staff Batch",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "first_name",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "last_name",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "username",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "billing",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "shipping",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "meta_data",
+											"value": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrlBooking}}/staff/batch",
+									"host": [
+										"{{baseUrlBooking}}"
+									],
+									"path": [
+										"staff",
+										"batch"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Staff Batch",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "first_name",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "last_name",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "username",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "billing",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "shipping",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "meta_data",
+											"value": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrlBooking}}/staff/batch",
+									"host": [
+										"{{baseUrlBooking}}"
+									],
+									"path": [
+										"staff",
+										"batch"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Staff/{id}",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrlBooking}}/staff/1?context=view",
+									"host": [
+										"{{baseUrlBooking}}"
+									],
+									"path": [
+										"staff",
+										"1"
+									],
+									"query": [
+										{
+											"key": "context",
+											"value": "view"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Staff/{id}",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "first_name",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "last_name",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "username",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "billing",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "shipping",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "meta_data",
+											"value": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrlBooking}}/staff/1",
+									"host": [
+										"{{baseUrlBooking}}"
+									],
+									"path": [
+										"staff",
+										"1"
+									],
+									"query": [
+										{
+											"key": "context",
+											"value": "view",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Staff/{id}",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "first_name",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "last_name",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "username",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "billing",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "shipping",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "meta_data",
+											"value": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrlBooking}}/staff/1",
+									"host": [
+										"{{baseUrlBooking}}"
+									],
+									"path": [
+										"staff",
+										"1"
+									],
+									"query": [
+										{
+											"key": "context",
+											"value": "view",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Staff/{id}",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "first_name",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "last_name",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "username",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "billing",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "shipping",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "meta_data",
+											"value": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrlBooking}}/staff/1",
+									"host": [
+										"{{baseUrlBooking}}"
+									],
+									"path": [
+										"staff",
+										"1"
+									],
+									"query": [
+										{
+											"key": "context",
+											"value": "view",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Staff/{id}",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "id",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "force",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "reassign",
+											"value": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrlBooking}}/staff/1",
+									"host": [
+										"{{baseUrlBooking}}"
+									],
+									"path": [
+										"staff",
+										"1"
+									],
+									"query": [
+										{
+											"key": "context",
+											"value": "view",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Slots API Controller",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrlBooking}}/slots",
+							"host": [
+								"{{baseUrlBooking}}"
+							],
+							"path": [
+								"slots"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Availability API Controller",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrlBooking}}/availabilities",
+							"host": [
+								"{{baseUrlBooking}}"
+							],
+							"path": [
+								"availabilities"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Booking API Wordpress ",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrlBooking}}",
+							"host": [
+								"{{baseUrlBooking}}"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

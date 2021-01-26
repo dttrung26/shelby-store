@@ -1,0 +1,27 @@
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
+import '../common/constants.dart';
+import '../generated/l10n.dart';
+
+part 'config/advertise.dart';
+part 'config/data_mapping.dart';
+part 'config/dynamic_link.dart';
+part 'config/general.dart';
+part 'config/languages.dart';
+part 'config/onboarding.dart';
+part 'config/payments.dart';
+part 'config/products.dart';
+part 'config/smartchat.dart';
+part 'config/vendor.dart';
+
+// FIXME 1.0 - Update our own Website 🌏
+
+/// Server config demo for Strapi
+const serverConfig = {
+  "type": "strapi",
+  "url": "https://strapi.inspireui.com",
+  "blog": "https://mstore.io",
+
+  /// set blank to use as native screen
+  "forgetPassword": ""
+};

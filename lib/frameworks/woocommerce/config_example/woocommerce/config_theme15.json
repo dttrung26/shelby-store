@@ -1,0 +1,114 @@
+{
+  "HorizonLayout": [
+    {
+      "layout": "header_text",
+      "fontSize": 22.0,
+      "height": 0.2,
+      "title": "Color Icons Demo",
+      "isSafeArea": true
+    },
+    {
+      "layout": "category",
+      "type": "icon",
+      "wrap": true,
+      "size": 1.2,
+      "radius": 9.0,
+      "columns": 4,
+      "shadow": 0.0,
+      "padding": 10.0,
+
+      "items": [
+        {
+          "category": 24,
+          "image": "assets/icons/categories/i_package.png",
+          "colors": [
+            "#5f27cd", "#5f27cd"
+          ]
+        },
+        {
+          "category": 25,
+          "image": "assets/icons/categories/i_shopping.png",
+          "colors": [
+            "#5f27cd", "#5f27cd"
+          ]
+        },
+        {
+          "category": 26,
+          "image": "assets/icons/categories/i_snow.png",
+          "colors": [
+            "#5f27cd", "#5f27cd"
+          ]
+        },
+        {
+          "category": 27,
+          "image": "assets/icons/categories/i_truck.png",
+          "colors": [
+            "#5f27cd", "#5f27cd"
+          ]
+        },
+        {
+          "category": 28,
+          "image": "assets/icons/categories/i-air.png",
+          "colors": [
+            "#5f27cd", "#5f27cd"
+          ]
+        },
+        {
+          "category": 29,
+          "image": "assets/icons/categories/i_instagram.png",
+          "colors": [
+            "#5f27cd", "#5f27cd"
+          ]
+        },
+        {
+          "category": 30,
+          "image": "assets/icons/categories/i_download.png",
+          "colors": [
+            "#5f27cd", "#5f27cd"
+          ]
+        },
+        {
+          "category": 18,
+          "image": "assets/icons/categories/i_briefcase.png",
+          "colors": [
+            "#5f27cd", "#5f27cd"
+          ]
+        }
+      ]
+    },
+
+    {
+      "name": "New Collections",
+      "layout": "staggered",
+      "limit": 20,
+      "category": 29
+    }
+  ],
+  "Setting": {
+    "MainColor": "#3FC1BE",
+    "ProductListLayout": "list"
+  },
+  "TabBar": [
+    {
+      "layout": "home",
+      "icon": "assets/icons/tabs/icon-home.png"
+    },
+    {
+      "layout": "category",
+      "categoryLayout": "card",
+      "icon": "assets/icons/tabs/icon-category.png"
+    },
+    {
+      "layout": "search",
+      "icon": "assets/icons/tabs/icon-search.png"
+    },
+    {
+      "layout": "cart",
+      "icon": "assets/icons/tabs/icon-cart2.png"
+    },
+    {
+      "layout": "profile",
+      "icon": "assets/icons/tabs/icon-user.png"
+    }
+  ]
+}

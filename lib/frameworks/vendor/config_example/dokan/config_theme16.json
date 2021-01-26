@@ -1,0 +1,53 @@
+{
+  "HorizonLayout": [
+    {
+      "layout": "header_text",
+      "fontSize": 25.0,
+      "title": "Most popular, \ntrending fashion ",
+      "padding": 30.0,
+      "height": 0.2,
+      "showSearch": true,
+      "isSafeArea": true
+    },
+    {
+      "layout": "largeCardHorizontalListItems",
+      "item": {
+        "category": 23,
+        "image": "",
+        "padding": 0.0
+      },
+      "imageWidth": 170.0
+    }
+  ],
+  "VerticalLayout": {
+    "layout": "list",
+    "name": "Woman Collections"
+  },
+  "Setting": {
+    "MainColor": "#3FC1BE",
+    "ProductListLayout": "list"
+  },
+  "TabBar": [
+    {
+      "layout": "home",
+      "icon": "assets/icons/tabs/icon-home.png"
+    },
+    {
+      "layout": "category",
+      "categoryLayout": "card",
+      "icon": "assets/icons/tabs/icon-category.png"
+    },
+    {
+      "layout": "search",
+      "icon": "assets/icons/tabs/icon-search.png"
+    },
+    {
+      "layout": "cart",
+      "icon": "assets/icons/tabs/icon-cart2.png"
+    },
+    {
+      "layout": "profile",
+      "icon": "assets/icons/tabs/icon-user.png"
+    }
+  ]
+}

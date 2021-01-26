@@ -1,0 +1,191 @@
+{
+  "HorizonLayout": [
+    {
+      "layout": "logo",
+      "showMenu": true,
+      "showSearch": true,
+      "showLogo": true
+    },
+    {
+      "layout": "category",
+      "type": "icon",
+      "wrap": false,
+      "size": 1.0,
+      "radius": 50.0,
+      "items": [{
+        "category": 18,
+        "image": "https://user-images.githubusercontent.com/1459805/62820029-2e679f00-bb88-11e9-80de-fdf115cfd942.png",
+        "colors": [
+          "#3CC2BF",
+          "#3CC2BF"
+        ],
+        "originalColor": false
+      },
+        {
+          "category": 24,
+          "image": "assets/icons/categories/ic_dress.png",
+          "colors": [
+            "#3E6AB5",
+            "#3E6AB5"
+          ]
+        },
+        {
+          "category": 25,
+          "image": "assets/icons/categories/ic_shorts.png",
+          "colors": [
+            "#53A2CC",
+            "#53A2CC"
+          ]
+        },
+        {
+          "category": 28,
+          "image": "assets/icons/categories/ic_glasses.png",
+          "colors": [
+            "#53688A",
+            "#53688A"
+          ]
+        },
+        {
+          "category": 29,
+          "image": "assets/icons/categories/ic_tie.png",
+          "colors": [
+            "#43506A",
+            "#43506A"
+          ]
+        },
+        {
+          "category": 30,
+          "image": "assets/icons/categories/ic_panties.png",
+          "colors": [
+            "#12B58C",
+            "#12B58C"
+          ]
+        }
+      ]
+    },
+    {
+      "layout": "bannerImage",
+      "isSlider": true,
+      "autoPlay": false,
+      "showNumber": false,
+      "design": "default",
+      "showBackGround": true,
+      "radius": 2.0,
+      "items": [
+        {
+          "category": 29,
+          "image": "https://trello-attachments.s3.amazonaws.com/5f8fe6093cd3ef24d9ede5f5/1185x561/e13d41fd04e4da0833097ab4e893c8c5/Mobile_Template_1b.png",
+          "padding": 15.0
+        },
+        {
+          "category": 28,
+          "image": "https://user-images.githubusercontent.com/1459805/59846818-12672e80-938b-11e9-8184-5f7bfe66f1a2.png",
+          "padding": 15.0
+        },
+        {
+          "product": 30,
+          "image": "https://user-images.githubusercontent.com/1459805/60091808-a19b8a00-976f-11e9-9cc7-576ca05c2442.png",
+          "padding": 15.0
+        }
+      ]
+    },
+    {
+      "name": "Vânzare Flash fericit 🎁",
+      "image": "https://trello-attachments.s3.amazonaws.com/5f8fe6093cd3ef24d9ede5f5/990x316/2bd8b7540812cdbc254129ff35667d93/sale.gif",
+      "layout": "saleOff",
+      "category": 22,
+      "isSnapping": true
+    },
+    {
+      "name": "Colecții de oameni",
+      "image": "",
+      "layout": "twoColumn",
+      "category": 21,
+      "isSnapping": true
+    },
+    {
+      "layout": "bannerImage",
+      "items": [
+        {
+          "image": "https://trello-attachments.s3.amazonaws.com/5fb8de4a9ffe12204a2a3607/700x263/f5d6007a5563735691c68eb12563d1e5/image.png",
+          "coupon": "blackf",
+          "padding": 8.0,
+          "radius": 9.0
+        }
+      ]
+    },
+
+    {
+      "name": "Vizualizare recentă",
+      "layout": "recentView"
+    },
+    {
+      "name": "Blog-ul nostru",
+      "layout": "blog"
+    },
+    {
+      "name": "Colecții noi",
+      "layout": "staggered",
+      "limit": 20,
+      "category": 29
+    }
+  ],
+  "Setting": {
+    "MainColor": "#3FC1BE",
+    "ProductListLayout": "list",
+    "StickyHeader": false,
+    "ShowChat": true
+  },
+  "TabBar": [{
+    "layout": "home",
+    "icon": "assets/icons/tabs/icon-home.png"
+  },
+    {
+      "layout": "category",
+      "categoryLayout": "card",
+      "icon": "assets/icons/tabs/icon-category.png"
+    },
+    {
+      "layout": "search",
+      "icon": "assets/icons/tabs/icon-search.png"
+    },
+    {
+      "layout": "cart",
+      "icon": "assets/icons/tabs/icon-cart2.png"
+    },
+    {
+      "layout": "profile",
+      "icon": "assets/icons/tabs/icon-user.png",
+      "showChat": true
+    }
+  ],
+  "searchSuggestion": [
+    "Here are some suggestions:",
+    "man",
+    "woman",
+    "dress",
+    "Stitch"
+  ],
+  "OnBoarding": {
+    "data": [
+      {
+        "title": "Bine ați venit la FluxStore",
+        "image": "assets/images/fogg-delivery-1.png",
+        "desc": "Fluxstore e pe cale să te servească. ",
+        "background": "#FFF3F2"
+      },
+      {
+        "title": "Conectați lumea înconjurătoare",
+        "image": "assets/images/fogg-uploading-1.png",
+        "desc": "Vedeți toate lucrurile care se întâmplă în jurul vostru doar printr-un clic în telefon. Rapid, convenabil și curat.",
+        "background": "#F2FFFC"
+      },
+      {
+        "title": "Să începem",
+        "image": "fogg-order-completed.png",
+        "desc": "Nu mai așteptăm, să vedem ce primim!",
+        "background": "#F9F2FF"
+      }
+    ]
+  }
+}

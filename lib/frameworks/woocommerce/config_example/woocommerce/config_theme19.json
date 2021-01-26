@@ -1,0 +1,145 @@
+{
+  "HorizonLayout": [
+    {
+      "layout": "logo",
+      "hideLogo": true
+    },
+    {
+      "layout": "header_text",
+      "fontSize": 23.0,
+      "height": 0.13,
+      "showSearch": true,
+      "padding": 30.0,
+      "rotate": [
+        "WooCommerce",
+        "Magento",
+        "Opencart"
+      ],
+      "type": "typer"
+    },
+    {
+      "layout": "category",
+      "type": "icon",
+      "wrap": true,
+      "size": 0.9,
+      "radius": 9.0,
+      "items": [
+        {
+          "category": "29",
+          "image": "assets/icons/categories/i_package.png",
+          "colors": [
+            "#3CC2BF",
+            "#3CC2BF"
+          ]
+        },
+        {
+          "category": 208,
+          "image": "assets/icons/categories/i_shopping.png",
+          "colors": [
+            "#2288E5",
+            "#2288E5"
+          ]
+        },
+        {
+          "category": "27",
+          "image": "assets/icons/categories/i_snow.png",
+          "colors": [
+            "#0090D0",
+            "#0090D0"
+          ]
+        },
+        {
+          "category": "24",
+          "image": "assets/icons/categories/i_truck.png",
+          "colors": [
+            "#0092D6",
+            "#0092D6"
+          ]
+        },
+        {
+          "category": 208,
+          "image": "assets/icons/categories/i-air.png",
+          "colors": [
+            "#3B2E6B",
+            "#3B2E6B"
+          ]
+        },
+        {
+          "category": "26",
+          "image": "assets/icons/categories/i_instagram.png",
+          "colors": [
+            "#0067B8",
+            "#0067B8"
+          ]
+        }
+      ],
+      "line": false,
+      "columns": 4
+    },
+    {
+      "name": "Man Collections",
+      "image": "",
+      "layout": "threeColumn",
+      "category": 21,
+      "isSnapping": true
+    }
+  ],
+  "Setting": {
+    "MainColor": "#3FC1BE",
+    "ProductListLayout": "list",
+    "StickyHeader": true
+  },
+  "TabBar": [
+    {
+      "layout": "home",
+      "icon": "assets/icons/tabs/icon-home.png",
+      "pos": 100
+    },
+    {
+      "layout": "category",
+      "categoryLayout": "card",
+      "icon": "assets/icons/tabs/icon-category.png",
+      "pos": 200
+    },
+    {
+      "layout": "search",
+      "icon": "assets/icons/tabs/icon-search.png",
+      "pos": 300
+    },
+    {
+      "layout": "cart",
+      "icon": "assets/icons/tabs/icon-cart2.png",
+      "pos": 400
+    },
+    {
+      "layout": "profile",
+      "icon": "assets/icons/tabs/icon-user.png",
+      "pos": 500
+    }
+  ],
+  "Drawer": {
+    "logo": "assets/images/logo.png",
+    "items": [
+      {
+        "type": "home",
+        "show": true
+      },
+      {
+        "type": "blog",
+        "show": true
+      },
+      {
+        "type": "login",
+        "show": true
+      },
+      {
+        "type": "category",
+        "show": true
+      }
+    ]
+  },
+  "Background": {
+    "height": 0.5,
+    "type": "wave"
+  }
+}
