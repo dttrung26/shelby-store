@@ -192,10 +192,10 @@ const kDefaultSettings = [
 /// ref: https://support.inspireui.com/help-center/articles/3/25/15/social-login
 const kLoginSetting = {
   'IsRequiredLogin': false,
-  'showAppleLogin': true,
-  'showFacebook': true,
-  'showSMSLogin': true,
-  'showGoogleLogin': true,
+  'showAppleLogin': false,
+  'showFacebook': false,
+  'showSMSLogin': false,
+  'showGoogleLogin': false,
   'showPhoneNumberWhenRegister': false,
   'requirePhoneNumberWhenRegister': false,
 };
