@@ -290,10 +290,12 @@ class ShopifyWidget extends BaseFrameworks
   String getPriceItemInCart(Product product, ProductVariation variation,
       currencyRate, String currency,
       {List<AddonsOption> selectedOptions}) {
-    return variation != null && variation.id != null
-        ? Tools.getVariantPriceProductValue(variation, currencyRate, currency,
-            onSale: true)
-        : Tools.getPriceProduct(product, currencyRate, currency, onSale: true);
+    return
+        // variation != null && variation.id != null
+        //   ? Tools.getVariantPriceProductValue(variation, currencyRate, currency,
+        //       onSale: true)
+        //   :
+        Tools.getPriceProduct(product, currencyRate, currency, onSale: true);
   }
 
   @override

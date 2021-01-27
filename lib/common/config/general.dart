@@ -45,7 +45,7 @@ const kAdvanceConfig = {
   'EnableSkuSearch': true,
 
   /// Show stock Status on product List & Product Detail
-  'showStockStatus': true,
+  'showStockStatus': false,
 
   /// Gird count setting on Category screen
   'GridCount': 3,

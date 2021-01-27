@@ -53,11 +53,12 @@ class _ProductTitleState extends BaseScreen<ProductTitle> {
 
       /// update the Sale price
       if (onSale) {
-        price = productVariation != null
-            ? productVariation.salePrice
-            : isNotBlank(widget.product.salePrice)
-                ? widget.product.salePrice
-                : widget.product.price;
+        // price = productVariation != null
+        //     ? productVariation.salePrice
+        //     : isNotBlank(widget.product.salePrice)
+        //         ? widget.product.salePrice
+        //         : widget.product.price;
+        price = widget.product.price;
         dateOnSaleTo = productVariation != null
             ? productVariation.dateOnSaleTo
             : widget.product.dateOnSaleTo;
@@ -81,8 +82,7 @@ class _ProductTitleState extends BaseScreen<ProductTitle> {
     getProductPrice();
 
     final currency = Provider.of<AppModel>(context).currency;
-    final currencyRate =
-        Provider.of<AppModel>(context).currencyRate;
+    final currencyRate = Provider.of<AppModel>(context).currencyRate;
     final dateOnSaleTo = DateTime.tryParse(
             productVariation?.dateOnSaleTo ?? widget.product.dateOnSaleTo ?? '')
         ?.millisecondsSinceEpoch;
