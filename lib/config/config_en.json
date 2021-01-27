@@ -9,23 +9,34 @@
     {
       "name": "Best Sellers",
       "image": "https://cdn.shopify.com/s/files/1/0510/8491/8981/files/Banner24106_2048x.jpg?v=1605342419",
-      "layout": "threeColumn",
+      "layout": "staggered",
       "category": "Z2lkOi8vc2hvcGlmeS9Db2xsZWN0aW9uLzIzODczNTgxODk0OQ==",
       "isSnapping": true
     },
     {
-      "name": "Corsets",
+      "name": "Dresses",
       "image": "",
       "layout": "fourColumn",
-      "category": "Z2lkOi8vc2hvcGlmeS9Db2xsZWN0aW9uLzIzODcyMjIyMDIyOQ=="
+      "category": "Z2lkOi8vc2hvcGlmeS9Db2xsZWN0aW9uLzIzODcyMDQxNzk4OQ=="
     },
     {
-      "name": "Vintage Dresses ",
+      "name": "Top & Tees",
       "image": "",
       "layout": "twoColumn",
-      "category": "Z2lkOi8vc2hvcGlmeS9Db2xsZWN0aW9uLzIzODcyMTgyNzAxMw=="
+      "category": "Z2lkOi8vc2hvcGlmeS9Db2xsZWN0aW9uLzIzODY2MTA3NTE0MQ=="
+    },
+    {
+      "name": "SwimWear",
+      "image": "",
+      "layout": "fourColumn",
+      "category": "Z2lkOi8vc2hvcGlmeS9Db2xsZWN0aW9uLzIzODcxOTgyODE2NQ=="
+    },
+    {
+      "name": "Plus Size",
+      "image": "",
+      "layout": "staggered",
+      "category": "Z2lkOi8vc2hvcGlmeS9Db2xsZWN0aW9uLzIzNTg0NjA0MTc5Nw=="
     }
-
   ],
   "VerticalLayout": {
     "name": "Explore more",
@@ -56,7 +67,7 @@
     },
     {
       "layout": "profile",
-      "icon": "assets/icons/tabs/icon-user.png",
+      "icon": "assets/icons/tabs/icon-user.png"
     }
 
   ],
