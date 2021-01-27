@@ -157,9 +157,9 @@ class _AppInitState extends BaseScreen<AppInit> {
   }
 
   Widget onNextScreen(bool isFirstSeen) {
-    if (!isFirstSeen && !kIsWeb && appConfig != null) {
-      if (onBoardingData.isNotEmpty) return OnBoardScreen(appConfig);
-    }
+    // if (!isFirstSeen && !kIsWeb && appConfig != null) {
+    //   if (onBoardingData.isNotEmpty) return OnBoardScreen(appConfig);
+    // }
 
     if (kLoginSetting['IsRequiredLogin'] && !isLoggedIn) {
       return LoginScreen(

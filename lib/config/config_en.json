@@ -7,36 +7,10 @@
       "showLogo": true
     },
     {
-      "layout": "bannerImage",
-      "isSlider": true,
-      "autoPlay": false,
-      "showNumber": false,
-      "design": "default",
-      "showBackGround": true,
-      "radius": 2.0,
-      "items": [
-        {
-          "category": 29,
-          "image": "https://trello-attachments.s3.amazonaws.com/5f8fe6093cd3ef24d9ede5f5/1185x561/e13d41fd04e4da0833097ab4e893c8c5/Mobile_Template_1b.png",
-          "padding": 15.0
-        },
-        {
-          "category": 28,
-          "image": "https://user-images.githubusercontent.com/1459805/59846818-12672e80-938b-11e9-8184-5f7bfe66f1a2.png",
-          "padding": 15.0
-        },
-        {
-          "product": 30,
-          "image": "https://user-images.githubusercontent.com/1459805/60091808-a19b8a00-976f-11e9-9cc7-576ca05c2442.png",
-          "padding": 15.0
-        }
-      ]
-    },
-    {
-      "name": "Plus Size Sale Off 🎁",
-      "image": "https://media.giphy.com/media/L3nblxlTfDKf1TH35X/giphy.gif",
+      "name": "Best Sellers",
+      "image": "https://cdn.shopify.com/s/files/1/0510/8491/8981/files/Banner24106_2048x.jpg?v=1605342419",
       "layout": "threeColumn",
-      "category": "Z2lkOi8vc2hvcGlmeS9Db2xsZWN0aW9uLzIzNTg0NjA0MTc5Nw==",
+      "category": "Z2lkOi8vc2hvcGlmeS9Db2xsZWN0aW9uLzIzODczNTgxODk0OQ==",
       "isSnapping": true
     },
     {

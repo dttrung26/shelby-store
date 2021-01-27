@@ -497,7 +497,7 @@ class Product {
       sku = json['sku'];
       name = json['title'];
       vendor = json['vendor'];
-      description = json['description'];
+      description = json['descriptionHtml'];
       price = priceV2 != null ? priceV2['amount'] : null;
       regularPrice = compareAtPrice ?? price;
       onSale = compareAtPrice != null && compareAtPrice != price;

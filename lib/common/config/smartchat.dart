@@ -2,7 +2,7 @@ part of '../config.dart';
 
 // TODO 2.5 - SmartChat Features 💬
 const kConfigChat = {
-  'EnableSmartChat': true,
+  'EnableSmartChat': false,
 };
 
 /// config for the chat app

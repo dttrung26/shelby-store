@@ -344,7 +344,7 @@ class ShopifyQuery {
                 id
                 title
                 vendor
-                description
+                descriptionHtml
                 availableForSale
                 productType
                 onlineStoreUrl
