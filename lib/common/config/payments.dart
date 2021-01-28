@@ -5,9 +5,9 @@ part of '../config.dart';
 /// TODO 3.3 - Payments Setting 💳
 /// config for payment features
 const kPaymentConfig = {
-  'DefaultCountryISOCode': 'VN',
+  'DefaultCountryISOCode': 'US',
 
-  'DefaultStateISOCode': 'SG',
+  'DefaultStateISOCode': 'CA',
 
   /// Enable the Shipping option from Checkout, support for the Digital Download
   'EnableShipping': true,

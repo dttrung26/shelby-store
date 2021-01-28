@@ -131,7 +131,7 @@ const kAdvanceConfig = {
   'EnableShoppingCart': false,
 
   /// Enable firebase to support FCM, realtime chat for Fluxstore MV
-  'EnableFirebase': true,
+  'EnableFirebase': false,
 
   /// ratio Product Image, default value is 1.2 = height / width
   'RatioProductImage': 1.2,
@@ -161,7 +161,6 @@ const kDefaultDrawer = {
   'background': null,
   'items': [
     {'type': 'home', 'show': true},
-    {'type': 'blog', 'show': true},
     {'type': 'categories', 'show': true},
     {'type': 'cart', 'show': true},
     {'type': 'profile', 'show': true},

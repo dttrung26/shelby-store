@@ -11,7 +11,6 @@ import '../../common/tools.dart';
 import '../../generated/l10n.dart';
 import '../../models/index.dart' show AppModel, User, UserModel, WishListModel;
 import '../../routes/flux_navigate.dart';
-import '../../screens/blogs/post_screen.dart';
 import '../../services/index.dart';
 import '../../widgets/common/webview.dart';
 import '../custom/smartchat.dart';
@@ -495,15 +494,19 @@ class _SettingScreenState extends State<SettingScreen>
           title = S.of(context).agreeWithPrivacy;
           trailing =
               const Icon(Icons.arrow_forward_ios, size: 18, color: kGrey600);
-          onTap = () => Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => PostScreen(
-                      //enter your pageId here
-                      pageId: 25569,
-                      pageTitle: '${S.of(context).agreeWithPrivacy}'),
-                ),
-              );
+          onTap = () {
+            if (kIsWeb) {
+              return Tools.launchURL(SettingConstants.privacyAndTermUrl);
+            }
+            return FluxNavigate.push(
+              MaterialPageRoute(
+                builder: (context) => WebView(
+                    url: SettingConstants.privacyAndTermUrl,
+                    title: 'Privacy & Terms'),
+              ),
+              forceRootNavigator: true,
+            );
+          };
           break;
         }
       case 'about':

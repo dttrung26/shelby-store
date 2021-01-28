@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">FluxStore</string>
+    <string name="app_name">Shelby Style</string>
 
     <!-- TODO 1.2 - Update Facebook Login Feature (optional) 🧩 -->
     <string name="facebook_app_id">430258564493822</string>

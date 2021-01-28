@@ -36,14 +36,16 @@
       "image": "",
       "layout": "staggered",
       "category": "Z2lkOi8vc2hvcGlmeS9Db2xsZWN0aW9uLzIzNTg0NjA0MTc5Nw=="
+    },
+    {
+      "name": "Short Sets",
+      "image": "",
+      "layout": "card",
+      "category": "Z2lkOi8vc2hvcGlmeS9Db2xsZWN0aW9uLzIzODcyMzM2NzEwOQ=="
     }
   ],
-  "VerticalLayout": {
-    "name": "Explore more",
-    "layout": "menu"
-  },
   "Setting": {
-    "MainColor": "#eba834",
+    "MainColor": "#DA693F",
     "ProductListLayout": "list",
     "StickyHeader": false
   },

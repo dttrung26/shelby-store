@@ -37,12 +37,14 @@ class _RiveSplashScreenState extends State<RiveSplashScreen> {
             setState(() {
               _riveArtboard = artboard;
             });
-            _controller.isActiveChanged.addListener(() {
-              if (!_controller.isActive) {
-                Future.delayed(const Duration(seconds: 1))
-                    .then((value) => widget.onSuccess());
-              }
-            });
+            Future.delayed(const Duration(seconds: 1))
+                .then((value) => widget.onSuccess());
+            // _controller.isActiveChanged.addListener(() {
+            //   if (!_controller.isActive) {
+            //     Future.delayed(const Duration(seconds: 1))
+            //         .then((value) => widget.onSuccess());
+            //   }
+            // });
           }
         },
       );
