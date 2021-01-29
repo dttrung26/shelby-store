@@ -37,7 +37,7 @@ class _RiveSplashScreenState extends State<RiveSplashScreen> {
             setState(() {
               _riveArtboard = artboard;
             });
-            Future.delayed(const Duration(seconds: 1))
+            Future.delayed(const Duration(milliseconds: 1500))
                 .then((value) => widget.onSuccess());
             // _controller.isActiveChanged.addListener(() {
             //   if (!_controller.isActive) {
